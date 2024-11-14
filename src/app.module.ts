@@ -5,6 +5,7 @@ import {
   ClientsModule,
   Transport,
 } from '@nestjs/microservices';
+import { MqttService } from './app.service';
 
 @Module({
   imports: [
@@ -30,6 +31,7 @@ import {
           },
         }),
     },
+    MqttService
   ],
 })
 export class AppModule {}
